@@ -1,122 +1,90 @@
 <main>
-
+  <div>
+    <h1 class='text-center'>{{page_header.title}}</h1>
+    <h6
+      class='text-center text-uppercase text-muted'
+    >{{page_header.description}}</h6>
+  </div>
   <div class='card'>
     <div class='card-body'>
-      <div class='card'>
-        <div class='card-body'>
-          <h1>{{heading.main.title}}</h1>
-          <h6 class='text-muted'>{{heading.main.text}}</h6>
-          <button
+      <div class='display-6 text-end'><b>{{section.about_us.title_list.main}}</b></div><br>
+      <div class='text-end'><h2>{{section.about_us.title_list.sub}}</h2></div><br>
+      <button
             type='button'
-            class='btn btn-primary'
-          >{{heading.main.button_text.solid}}</button>
-          <br /><br />
-          <button
-            type='button'
-            class='btn btn-outline-primary'
-          >{{heading.main.button_text.outline}}</button>
+            class='btn btn-outline-info'
+          >{{section.about_us.button.text}}</button>
         </div>
-      </div>
-      <br />
-      <div class='card'>
-        <div class='card-body'>
-          <h2>{{heading.second.title}}</h2>
-          <h6
-            class='text-muted'
-          >{{heading.second.text}}</h6>
-          <button
-            type='button'
-            class='btn btn-secondary'
-          >{{heading.second.button_text.solid}}</button>
-          <br /><br />
-          <button
-            type='button'
-            class='btn btn-outline-secondary'
-          >{{heading.second.button_text.outline}}</button>
+    </div>
+  </div>
+  <br>
+  <div class='card'>
+    <div class='card-body'>
+      <div class='display-5 text-muted'><b>{{section.advantage.title}}</b></div><br>
+        <div class='card'>
+          <div class='card-body'>
+              <div class='display-4 text-muted'><b>{{section.advantage.efficiency.title}}</b></div><br>
+              <h6>{{section.advantage.efficiency.sub_title}}</h6><br>
+              <h6 class='text-muted'>{{section.advantage.efficiency.description}}</h6><br>
+              <button
+                type='button'
+                class='btn btn-outline-warning'
+                >{{section.advantage.efficiency.button}}</button>
+          </div>
         </div>
-      </div>
-      <div class='card'>
-        <div class='card-body'>
-          <h3>{{heading.subblock.title}}</h3>
-          <h6
-            class='text-muted'
-          >{{heading.subblock.text}}</h6>
-          <button
-            type='button'
-            class='btn btn-dark'
-          >{{heading.subblock.button_text.solid}}</button>
-          <br /><br />
-          <button
-            type='button'
-            class='btn btn-outline-dark'
-          >{{heading.subblock.button_text.outline}}</button>
+        <br>
+        <div class='card'>
+          <div class='card-body'>
+                <div class='display-4 text-center text-muted'><b>{{section.advantage.innovation.title}}</b></div><br>
+                <h6 class='text-center'>{{section.advantage.innovation.sub_title}}</h6><br>
+                <h6 class='text-center text-muted'>{{section.advantage.innovation.description}}</h6><br>
+                <button
+                type='button'
+                class='btn btn-outline-warning'
+                >{{section.advantage.innovation.button}}</button>
+
+          </div>
         </div>
-      </div>
+        <br>
+        <div class='card'>
+          <div class='card-body'>
+                <div class='display-4 text-end text-muted'><b>{{section.advantage.collaboration.title}}</b></div><br>
+                <h6 class='text-end'>{{section.advantage.collaboration.sub_title}}</h6><br>
+                <h6 class='text-end text-muted'>{{section.advantage.collaboration.description}}</h6><br>
+                <button
+                type='button'
+                class='btn btn-outline-warning'
+                >{{section.advantage.collaboration.button}}</button>
+
+          </div>
+        </div>
 
     </div>
   </div>
   <br />
   <div class='card'>
-    <div class='card-body'>
-      <div class='display-1'><b
-        >{{nested_display.title}}</b></div><br />
-      <div class='card'>
-        <div class='card-body'>
-          <div class='display-4'><b
-            >{{nested_display.children_display.title}}</b></div>
+          <div class='card-body'>
+                <div class='display-5'><b>{{section.agreement.title}}</b></div><br>
+                  <div class='card'>
+                    <div class='card-body'>
+                
+                                <h5>H{{section.agreement.info.sub_title}}</h5><br>
+                        <div class='card'>
+                            <div class='card-body'>
 
-          <h6
-            class='text-muted'
-          >{{nested_display.children_display.text}}</h6>
-          <button
-            type='button'
-            class='btn btn-outline-warning'
-          >{{nested_display.children_display.button.text}}</button>
+                                <h6 class=' text-muted'>{{section.agreement.info.detail.text}}</h6><br>
+                                <button
+                                type='button'
+                                class='btn btn-success'
+                                >{{section.agreement.info.detail.button}}</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+          </div>
         </div>
-      </div>
-      <br />
-      <h6>{{nested_display.header_text}}</h6>
-      <button
-        type='button'
-        class='btn btn-info'
-      >{{nested_display.button.text}}</button>
-
-    </div>
-    <br />
-  </div>
-  <div class='card'>
-    <div class='card-body'>
-      <div
-        class='text-uppercase text-muted'
-      >{{paragraph.title}}</div>
-      <br />
-      <div
-        class='text-lowercase text-muted'
-      >{{paragraph.text}}</div>
-      <br />
-      <div class='btn text-primary'><a
-          htef='https://google.com'
-        >{{paragraph.button.text}}</a></div>
-      <div class='card'>
-        <div class='card-body'>
-          <ul>
-            {{#each paragraph.list_name}}
-              <li>
-                <div class='text-primary'>
-                  <a
-                    href='{{url}}'
-                    target='_blank'
-                  >{{text}}</a>
-
-                </div>
-              </li>
-              <br />
-            {{/each}}
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </div>
+  <br />
+  <br />
+  
 </main>
