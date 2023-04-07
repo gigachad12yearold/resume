@@ -1038,7 +1038,7 @@ router.get('/facebook', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================//
+// ================================================================
 
 router.get('/bootstrap', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1183,7 +1183,7 @@ router.get('/task22', function (req, res) {
           sub_title: 'Check out our requirements',
           detail: {
             text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
-            button: 'Аccept',
+            button: 'Accept',
           },
         },
       },
