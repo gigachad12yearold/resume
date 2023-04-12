@@ -1,0 +1,10 @@
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each list}}
+        <li>
+            {{#if @first}} <button>{{name}}</button>{{/if}}
+            <span>{{name}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
