@@ -4,98 +4,67 @@
 --}}
 
 <div>
-    <header>
+  {{#with main}}
+  <main>
+    <section class="mb-5">
+        {{> title data="Work history" big=true}}
+        <div>
+            <p>
+              <ul class="ps-5">
+            {{#each works}}
+            <li>
+              <div class="pb-3">{{position}}</div>
 
-    </header>
-    
-    {{#with main}}
-    <main>
-        <section>
-            {{> title data='Work history' big=true }}
-            <div>
-                <ul>
-                 {{#each works}}
-                    <li>
-                              <div>{{position}}</div>
-                              <br>
-                              <div>
-                                {{duration.from}} - 
-                                {{#if duration.to}} {{duration.to}} 
-                                {{else}}(досі працюємо)
-                                {{/if}}
-                              </div>
+              <div class="pb-3">{{duration.from}} - 
+                {{#if duration.to}}{{duration.to}} 
+                {{else}} (досі працюю) 
+                {{/if}}</div>
 
-                              <div>
-                                {{#if company.url}} 
-                                {{> link href=company.name blank=true noLine=true}}
-                                {{else}}
-                             <b>{{company.name}}</b>
-                                {{/if}}
-                              </div>
+              <div>
+                {{#if company.url}}
+                {{> link href=company.url text=company.name blank=true noLine=true}}
+                {{else}} <b>{{company.name}}</b>
+                {{/if}}
+                </div>
+              
+              <div class="pt-5"><h5>Projects ({{projectAmount}})</strong></h5>
+              
+              <ul>
+                {{#each projects}}
+                <li>
+                  <div class="py-3">{{> link href=url  text=name blank=true noLine=true}}</div>
                   
-                        
-                            <br>
-                            <br>
-                            <div>
-                                <strong>Projects ({{projectAmount}})</strong>
-                            </div>
-                            
-                            <br>
-
-                            <ul>
-                                {{#each projects}}
-                                <li>
-                                        {{> link text=name href=url blank=true noLine=true}}
-                                </li>
-                               
-                             <br>
-
-                             <div>
-                                 <p>
-                                    {{about}}
-                                 </p>
-                             </div>
-
-                             <br>
-
-                             <div>
-                                <em>Project stacks(3)</em>
-                             </div>
-
-                             <br>
-                           
-
-                             {{#each stacks}}
-                             <li>
-                                {{name}}
-                             
-                             {{/each}}
-
-                             <br>
-                                </li>
-                             <br>
-                             <div>
-                                <em>Project awards(2)</em>
-                             </div>
-                             
-                             <br>
-
-                             {{#each awards}}
-                                <div>
-                                 {{name}}
-                                </div>
-                             {{/each}}
-                             
-                             {{/each}}
-                            </ul>
-                          </li>
-                    <br>
-                 {{/each}}
-                </ul>
-            </div>
-        </section>
-         </main>
-    {{/with}}
+                  <div>{{about}}</div>
+                  
+                  <div class="py-4"><h6>Project stacks (3) </h6></div>
+                  
+                  <ul>
+                  {{#each stacks}}
+                  <li>
+                  <div>{{name}} </div>
+                  {{/each}}
+                  </li>
+                  </ul>
+                  
+                  <div class="py-4"><h6>Project awards (2)</h6></div>
+                 
+                  <ul>
+                  {{#each awards}}
+                  <li>
+                  <div>{{name}} </div>
+                  {{/each}}
+                  </li>
+                  </ul>
+                </li>
+                {{/each}}
+              </ul>
+            </li>
+            {{/each}}
+            </ul>
+            </p>
+        </div>
+    </section>
+{{/with}}
 </div>
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
